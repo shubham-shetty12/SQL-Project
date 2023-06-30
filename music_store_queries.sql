@@ -44,7 +44,7 @@ order by c.email
 Write a query that returns the Artist name and total track count of the top 10 rock bands*/
 
 Select a.artist_id,a.name,count(a.artist_id) as no_of_songs from track t
-join album al on al.albu9_id=t.album_id
+join album al on al.album_id=t.album_id
 join artist a on al.artist_id=a.artist_id
 join genre g on g.genre_id=t.genre_id
 where g.name like 'Rock'
